@@ -5,11 +5,12 @@ function MyArray() {
   for(let i = 0; i < arguments.length; i++) {
     this.push(arguments[i]);
   }
-  /* 1. Method - MyArray.isMyArray(arg) */
-  this.isMyArray = function isMyArray(arg) {
-    return arg instanceof MyArray;
-  };
 }
+
+// 1. Method - MyArray.isMyArray(arg)
+MyArray.isMyArray = function isMyArray(obj) {
+  return obj instanceof MyArray;
+};
 
 function MyArrayProto() {
 
